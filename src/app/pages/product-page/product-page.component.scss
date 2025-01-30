@@ -20,17 +20,12 @@
 }
 
 .formBody {
-    align-items: center;
     background-color: rgba(15, 98, 180, 0.267);
     border-color: black;
     border-radius: 10px;
     border-style: solid;
     border-width: 1px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     padding: 1%;
-    width: 55%;
 }
 
 // .inputContainer {
@@ -41,5 +36,5 @@
 //     width: 100%;
 // }
 // .inputStyle {
-//     width: 50%;
+//     width: 100%;
 // }
