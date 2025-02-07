@@ -4,15 +4,22 @@
     </div>
     <hr>
 
-    <form class="formContainer" action="">
-        <div class="grid formBody">
+    <form class="formBody" [formGroup]="myForm" action="">
+        <div class="grid">
             <div class="lg:col-4">
                 <mat-form-field>
                     <mat-label>Nombre</mat-label>
-                    <input matInput type="text" placeholder="Ingrese el nombre">
-                    <mat-hint align="end">Un texto de prueba</mat-hint>
+                    <input matInput type="text" placeholder="Ingrese el nombre" formControlName="name">
+                    <mat-hint align="start">Un texto de prueba</mat-hint>
                 </mat-form-field>
             </div>
         </div>
+        <div class="buttonContainer">
+            <button mat-flat-button>Cambiar color</button>
+        </div>
     </form>
+
+    <pre class="mt-5">
+        {{ myForm.get('name')?.errors | json }}
+    </pre>
 </div>
