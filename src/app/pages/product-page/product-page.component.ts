@@ -8,9 +8,19 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 
+import { CustomLabelDirective } from '../../shared/directives/custom-label.directive';
+
 @Component({
   selector: 'app-product-page',
-  imports: [ CommonModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatButtonModule, ReactiveFormsModule ],
+  imports: [
+    CommonModule,
+    CustomLabelDirective,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    ReactiveFormsModule,
+  ],
   templateUrl: './product-page.component.html',
   styleUrl: './product-page.component.scss'
 })
@@ -28,4 +38,8 @@ export class ProductPageComponent {
 
   constructor() {};
 
+  changeColor() {
+    const color = '#xxxxxx'.replace(/x/g, y=>(Math.random()*16|0).toString(16));
+    this.myColor = color;
+  }
 }
