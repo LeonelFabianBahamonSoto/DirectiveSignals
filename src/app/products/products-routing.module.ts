@@ -10,7 +10,7 @@ const routes: Routes = [
       { path: 'product-main', component: ProductPageComponent },
       { path: '**', redirectTo: 'product-main' },
     ]
-  }
+  },
 ];
 
 @NgModule({

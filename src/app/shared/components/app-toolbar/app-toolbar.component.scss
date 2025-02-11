@@ -1,0 +1,19 @@
+.titleContainer {
+    align-items: center;
+    display: flex;
+    font-size: 1.25rem;
+    font-weight: 600;
+    justify-content: center;
+    margin-bottom: 15%;
+    margin-top: 10%;
+}
+
+.matListItemContainer {
+    margin-top: 4%;
+}
+
+.active {
+  background-color: #1976d2;
+  color: #F3F3F3;
+  font-weight: bold;
+}
