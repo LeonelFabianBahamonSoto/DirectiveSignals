@@ -1,0 +1,6 @@
+<div *ngFor="let item of menuItems()" style="display: flex; flex-direction: column; padding: 4%;">
+  <button mat-fab extended (click)="changeMenuValue( item.label )">
+    {{ item.label }}
+    <mat-icon>{{ item.icon }}</mat-icon>
+  </button>
+</div>

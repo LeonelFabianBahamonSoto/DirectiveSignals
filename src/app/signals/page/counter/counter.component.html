@@ -1,0 +1,23 @@
+<app-toolbar>
+  <div class="grid" style="height: 95vh;">
+    <div class="col-2" style="background-color: aqua;">
+      <app-side-menu></app-side-menu>
+    </div>
+    <div class="col-10" style="background-color: #F3F3F3;">
+
+      <h1>Counter {{ counter() }}</h1>
+      <hr>
+      <h2>Square Counter {{ squaredCounter() }}</h2>
+      <hr>
+
+      <div style="display: flex; width: 100%; justify-content: center; margin-top: 2.5%; margin-bottom: 10%;">
+        <button mat-flat-button (click)="increaseBy( 1 )"> + 1 </button>
+        &nbsp;
+        <button mat-flat-button (click)="decreaseBy( 1 )"> - 1 </button>
+        &nbsp;
+        <button mat-flat-button (click)="counter.set(0)"> Reset </button>
+      </div>
+
+    </div>
+  </div>
+</app-toolbar>

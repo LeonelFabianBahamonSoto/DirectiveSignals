@@ -1,0 +1,38 @@
+<mat-drawer-container class="example-container" [hasBackdrop]="true">
+    <mat-drawer #drawer [mode]="'push'">
+        <mat-nav-list>
+            <div class="titleContainer">
+                Directives and Signals
+            </div>
+            <mat-list-item class="active" *ngFor="let item of sidebarProductsItems" [routerLink]="item.url" routerLinkActive="active" (click)="drawer.toggle()">
+                <mat-icon matListItemIcon>
+                    {{ item.icon }}
+                </mat-icon>
+                <div class="buttonTitle">
+                    {{ item.label }}
+                </div>
+                <div class="buttonSubTitle">
+                    {{ item.description }}
+                </div>
+            </mat-list-item>
+
+            <mat-list-item class="active" *ngFor="let item of sidebarSignalsItems" [routerLink]="item.url" routerLinkActive="active" (click)="drawer.toggle()">
+                <mat-icon matListItemIcon>
+                    {{ item.icon }}
+                </mat-icon>
+                <div class="buttonTitle">
+                    1 {{ item.label }} {{ item.url }}
+                </div>
+                <div class="buttonSubTitle">
+                    {{ item.description }}
+                </div>
+            </mat-list-item>
+        </mat-nav-list>
+
+    </mat-drawer>
+    <mat-drawer-content style="height: 100vh;">
+        <appSideNavMenu (toggleDrawer)="openDrawer()"></appSideNavMenu>
+
+        <ng-content></ng-content>
+    </mat-drawer-content>
+</mat-drawer-container>
